@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        
+        <section id="page-1" class="page active">
+            <div class="card lock-card">
+                <h2>🔒 Security Check</h2>
+                <p>Ipasok ang Secret PIN para mabuksan ang sorpresa.</p>
+                <div class="pin-display">
+                    <input type="password" id="pin-input" readonly placeholder="••••">
+                </div>
+                <div class="keypad">
+                    <button onclick="pressKey('1')">1</button>
+                    <button onclick="pressKey('2')">2</button>
+                    <button onclick="pressKey('3')">3</button>
+                    <button onclick="pressKey('4')">4</button>
+                    <button onclick="pressKey('5')">5</button>
+                    <button onclick="pressKey('6')">6</button>
+                    <button onclick="pressKey('7')">7</button>
+                    <button onclick="pressKey('8')">8</button>
+                    <button onclick="pressKey('9')">9</button>
+                    <button onclick="clearPin()" class="btn-clear">C</button>
+                    <button onclick="pressKey('0')">0</button>
+                    <button onclick="checkPin()" class="btn-enter">✔</button>
+                </div>
+                <p id="error-msg" class="error-text"></p>
+            </div>
+        </section>
+
+        
+        <section id="page-2" class="page">
+            <div class="card hbd-card">
+                <div class="confetti-icon">🎉</div>
+                <h1 class="glow-text">HAPPY BIRTHDAY!</h1>
+                <h2 class="celebrant-name">[Pangalan ng Birthday Celebrant]</h2>
+                <p class="subtext">Ngayong araw na ito, bawal ang stress. Ikaw ang bida!</p>
+            </div>
+        </section>
+
+        
+        <section id="page-3" class="page">
+            <div class="card letter-card">
+                <h2>📝 Ang Liham Para Sayo</h2>
+                <div class="letter-content">
+                    <p>Hi [Pangalan],</p>
+                    <p>Gusto ko lang magpasalamat sa lahat ng tawa, asaran, at mga panahong nandiyan ka. Napakasuwerte namin/ko na naging bahagi ka ng buhay namin.</p>
+                    <p>Sana sa araw na ito, maramdaman mo kung gaano ka kahalaga. Huwag mong kakalimutan na marami kaming nagmamahal at sumusuporta sa iyo sa lahat ng pangarap mo.</p>
+                    <p>Ipagpatuloy mo lang ang pagiging mabuting tao at ang pagpapasaya sa mga nakapaligid sayo. Happy, happy birthday!</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="page-4" class="page">
+            <div class="card wishes-card">
+                <h2>✨ Mga Kahilingan ng Lahat</h2>
+                <p class="intro-wishes">Heto ang mga mensahe mula sa mga taong nagmamahal sayo:</p>
+                
+                <div class="wishes-grid">
+                    <div class="wish-box">
+                        <p class="wish-text">"Happy birthday! Sana matupad lahat ng pangarap mo sa buhay. Libre mo kami ha!"</p>
+                        <p class="wish-author">- Mama & Papa</p>
+                    </div>
+                    <div class="wish-box">
+                        <p class="wish-text">"HBD bro! Salamat sa laging pagdamay sa gaming at sa galaan. More birthdays to come!"</p>
+                        <p class="wish-author">- Bestfriend mo</p>
+                    </div>
+                    <div class="wish-box">
+                        <p class="wish-text">"Stay awesome and beautiful/handsome as always! GBU lodi!"</p>
+                        <p class="wish-author">- [Pangalan ng Kaibigan]</p>
+                    </div>
+                    <div class="wish-box">
+                        <p class="wish-text">"More blessings at sana mas masaya pa ang taon na ito para sayo. Cheers!"</p>
+                        <p class="wish-author">- Tropa Crew</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <div id="nav-controls" class="nav-container hidden">
+            <button id="prev-btn" onclick="navigatePage(-1)" disabled>◀ Likod</button>
+            <div class="page-indicator"><span id="current-step">1</span> / 3</div>
+            <button id="next-btn" onclick="navigatePage(1)">Sulong ▶</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
